@@ -1,5 +1,34 @@
+/*Primary
+
+Dark cyan: hsl(158, 36%, 37%)
+Cream: hsl(30, 38%, 92%)
+Neutral
+
+Very dark blue: hsl(212, 21%, 14%)
+Dark grayish blue: hsl(228, 12%, 48%)
+White: hsl(0, 0%, 100%)
+
+Body Copy
+
+Font size (paragraph): 14px
+Font
+
+Family: Montserrat
+
+Weights: 500, 700
+
+Family: Fraunces
+
+Weights: 700*/
+$dark-cyan:hsl(158, 36%, 37%);
+$cream:hsl(30, 38%, 92%);
+
+$very-dark-blue: hsl(212, 21%, 14%);
+$darkgray: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
 body{
-    background-color: beige;
+    background-color: $cream;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -33,17 +62,26 @@ body{
         padding-left: 10px;
         margin-top: 5px;
         margin-bottom: 5px;
-        font-size: 18px;
-        color: rgb(171, 169, 169);
+        font-size: 14px;
+        color: $darkgray;
+        font-family: "Montserrat";
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
     }
     h2{
         padding-left: 10px; 
         margin-bottom: 5px;
         margin-top: 5px;
+        font-family: "Fraunces";
     }
     p{
         padding-left: 10px; 
         padding-right: 10px;
+        font-size : 14px;
+        font-family: "Montserrat";
+        font-weight: 500;
+        
     }
     .pricebox{
         display: flex;
@@ -52,18 +90,21 @@ body{
         display: flex;
         justify-content: center;
         padding: 10px;
+        font-family: "Montserrat";
+        font-weight: 500;
     }
     button{
-        background-color: green;
+        background-color: $dark-cyan;
         color:white;
         border-radius: 5px;
-        display: flex;
-        padding: 10px 100px;
-
+        width: 300px;
+    text-align: center;
+    margin: auto;
+    height: 40px;
     }
     .reduc{
         font-size: 20px;
-        color:green;
+        color:$dark-cyan;
         font-weight: 700;
     }
     .prixbase{
@@ -77,8 +118,76 @@ body{
 @media (min-width: 501px) {
     .desktop-image {
         display: block;
+        display: block;
+        width:400px;
+        height: 380px;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
     }
-
+    .card{
+        width:400px;
+        border-radius: 20px;
+        background-color: white;
+    }
+    .content{
+        background-color: white;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    h1{
+        margin-top: 0px;
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: $darkgray;
+        font-family: "Montserrat";
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+    h2{
+        padding-left: 20px; 
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-family: "Fraunces";
+    }
+    p{
+        padding-left: 20px; 
+        padding-right: 20px;
+        font-size : 15px;
+        font-family: "Montserrat";
+        font-weight: 500;
+        
+    }
+    .pricebox{
+        display: flex;
+    }
+    .addcard{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-family: "Montserrat";
+        font-weight: 500;
+    }
+    button{
+        background-color: $dark-cyan;
+        color:white;
+        border-radius: 10px;
+        width: 400px;
+    text-align: center;
+    margin: auto;
+    height: 40px;
+    }
+    .reduc{
+        font-size: 22px;
+        color:$dark-cyan;
+        font-weight: 700;
+    }
+    .prixbase{
+        text-decoration: line-through;
+        color: rgb(171, 169, 169);
+    }
     .mobile-image {
         display: none;
     }
